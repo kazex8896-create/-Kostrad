@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kostrad - Komando Cadangan Strategis Angkatan Darat</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(rgba(20, 30, 20, 0.8), rgba(20, 30, 20, 0.9)), 
+                        url('https://images.unsplash.com/photo-1590236166440-6216f9f9578c?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .sidebar-active {
+            border-left: 4px solid #4ade80;
+            background-color: rgba(74, 222, 128, 0.1);
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 4px;
+            background: #166534;
+            margin-top: 8px;
+        }
+
+        .timeline-line::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            width: 2px;
+            height: 100%;
+            background: #d1d5db;
+            transform: translateX(-50%);
+        }
+
+        @media (max-width: 768px) {
+            .timeline-line::before {
+                left: 20px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-green-900 text-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+                        <i class="fas fa-shield-halved text-green-800 text-xl"></i>
+                    </div>
+                    <span class="font-bold text-xl tracking-wider">KOSTRAD</span>
+                </div>
+                <div class="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-widest">
+                    <a href="#beranda" class="hover:text-green-400 transition">Beranda</a>
+                    <a href="#sejarah" class="hover:text-green-400 transition">Sejarah</a>
+                    <a href="#organisasi" class="hover:text-green-400 transition">Organisasi</a>
+                    <a href="#peran" class="hover:text-green-400 transition">Peran</a>
+                    <a href="#identitas" class="hover:text-green-400 transition">Identitas</a>
+                </div>
+                <button class="md:hidden text-2xl" onclick="toggleMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-green-800 px-4 pt-2 pb-6 space-y-2">
+            <a href="#beranda" class="block py-2">Beranda</a>
+            <a href="#sejarah" class="block py-2">Sejarah</a>
+            <a href="#organisasi" class="block py-2">Organisasi</a>
+            <a href="#peran" class="block py-2">Peran</a>
+            <a href="#identitas" class="block py-2">Identitas</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="beranda" class="hero-gradient h-screen flex items-center justify-center text-center text-white px-4">
+        <div class="max-w-4xl">
+            <h2 class="text-green-400 font-semibold tracking-[0.3em] mb-4 uppercase">Dharma Putra</h2>
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">KOMANDO CADANGAN STRATEGIS ANGKATAN DARAT</h1>
+            <p class="text-lg md:text-xl text-slate-300 mb-8 max-w-2xl mx-auto font-light leading-relaxed">
+                Satuan elite berkemampuan lintas udara (paratrooper) yang berfungsi sebagai komando utama operasi sekaligus komando utama pembinaan TNI Angkatan Darat.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#sejarah" class="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-full font-bold transition duration-300">
+                    Pelajari Sejarah
+                </a>
+                <a href="#organisasi" class="bg-transparent border-2 border-white hover:bg-white hover:text-green-900 text-white px-8 py-3 rounded-full font-bold transition duration-300">
+                    Struktur Organisasi
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sejarah Section -->
+    <section id="sejarah" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold section-title inline-block">Sejarah Pembentukan</h2>
+                <p class="mt-4 text-slate-600">Perjalanan dari Caduad hingga menjadi Kostrad</p>
+            </div>
+
+            <div class="relative timeline-line space-y-12">
+                <!-- Point 1 -->
+                <div class="relative flex flex-col md:flex-row items-center justify-between">
+                    <div class="md:w-5/12 text-center md:text-right order-2 md:order-1 mt-4 md:mt-0">
+                        <h3 class="text-xl font-bold text-green-800">Cikal Bakal: CADUAD</h3>
+                        <p class="text-slate-600 mt-2">Berdasarkan SK Kasad No. KPTS 1067/12/1960, dibentuklah Cadangan Umum Angkatan Darat (Caduad) pada 6 Maret 1961 untuk kesiapan tempur cepat.</p>
+                    </div>
+                    <div class="z-10 bg-green-700 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold order-1">1961</div>
+                    <div class="md:w-5/12 order-3 hidden md:block">
+                        <div class="bg-slate-100 p-6 rounded-xl border-l-4 border-green-600 italic text-slate-500">
+                            "Panglima Pertama: Brigjen TNI Soeharto ditunjuk memimpin operasional Caduad."
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Point 2 -->
+                <div class="relative flex flex-col md:flex-row items-center justify-between">
+                    <div class="md:w-5/12 order-2 md:order-1 hidden md:block text-right">
+                        <div class="bg-slate-100 p-6 rounded-xl border-r-4 border-green-600 italic text-slate-500">
+                            "Pembebasan Irian Barat menjadi ujian tempur pertama yang sukses bagi satuan ini."
+                        </div>
+                    </div>
+                    <div class="z-10 bg-green-700 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold order-1">1962</div>
+                    <div class="md:w-5/12 text-center md:text-left order-2 md:order-3 mt-4 md:mt-0">
+                        <h3 class="text-xl font-bold text-green-800">Komando Mandala</h3>
+                        <p class="text-slate-600 mt-2">Caduad dilebur menjadi Komando Mandala dalam rangka operasi pembebasan Irian Barat dari tangan Belanda.</p>
+                    </div>
+                </div>
+
+                <!-- Point 3 -->
+                <div class="relative flex flex-col md:flex-row items-center justify-between">
+                    <div class="md:w-5/12 text-center md:text-right order-2 md:order-1 mt-4 md:mt-0">
+                        <h3 class="text-xl font-bold text-green-800">Resmi Menjadi KOSTRAD</h3>
+                        <p class="text-slate-600 mt-2">Melalui Keputusan Men/Pangad No. KPTS 178/2/1963 tanggal 19 Februari 1963, nama Caduad resmi diubah menjadi Kostrad.</p>
+                    </div>
+                    <div class="z-10 bg-green-700 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold order-1">1963</div>
+                    <div class="md:w-5/12 order-3 hidden md:block">
+                        <div class="bg-green-50 p-4 rounded-lg border border-green-200">
+                            <p class="text-green-800 font-semibold">HUT Kostrad:</p>
+                            <p class="text-sm">Ditetapkan setiap tanggal 6 Maret mengacu pada lahirnya Caduad.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Organisasi Section -->
+    <section id="organisasi" class="py-20 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+                <div>
+                    <h2 class="text-3xl font-bold section-title">Struktur & Organisasi</h2>
+                    <p class="mt-6 text-slate-600 leading-relaxed">
+                        Kostrad dipimpin oleh seorang Panglima Kostrad (Pangkostrad) berpangkat Letnan Jenderal. Sebagai kekuatan pemukul terbesar, Kostrad mengelola tiga divisi utama yang terdiri dari Brigade Infanteri berkualifikasi Para Raider atau Raider.
+                    </p>
+                </div>
+                <div class="bg-green-800 p-8 rounded-2xl text-white shadow-2xl">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <i class="fas fa-users-rays text-4xl text-green-400"></i>
+                        <div>
+                            <h4 class="text-xl font-bold tracking-wide">PIMPINAN TERTINGGI</h4>
+                            <p class="text-green-200 text-sm">Pangkostrad (Letnan Jenderal TNI)</p>
+                        </div>
+                    </div>
+                    <hr class="border-green-700 mb-6">
+                    <ul class="space-y-4">
+                        <li class="flex items-start space-x-3">
+                            <i class="fas fa-check-circle text-green-400 mt-1"></i>
+                            <span>Divisi Infanteri (Divif) 1, 2, & 3</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="fas fa-check-circle text-green-400 mt-1"></i>
+                            <span>Brigade Infanteri (Brigif)</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="fas fa-check-circle text-green-400 mt-1"></i>
+                            <span>Batalyon Para Raider / Raider</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Divisi 1 -->
+                <div class="bg-white p-6 rounded-xl border-t-4 border-green-600 card-hover">
+                    <div class="text-green-700 font-bold text-lg mb-2">DIVIF 1</div>
+                    <h3 class="text-xl font-extrabold mb-3">Prakasa Vira Gupti</h3>
+                    <p class="text-sm text-slate-500 mb-4 flex items-center">
+                        <i class="fas fa-location-dot mr-2"></i> Cilodong, Depok, Jawa Barat
+                    </p>
+                    <p class="text-slate-600 text-sm">Bertanggung jawab atas wilayah pertahanan strategis di bagian barat Indonesia.</p>
+                </div>
+
+                <!-- Divisi 2 -->
+                <div class="bg-white p-6 rounded-xl border-t-4 border-green-600 card-hover">
+                    <div class="text-green-700 font-bold text-lg mb-2">DIVIF 2</div>
+                    <h3 class="text-xl font-extrabold mb-3">Vira Cakti Yudha</h3>
+                    <p class="text-sm text-slate-500 mb-4 flex items-center">
+                        <i class="fas fa-location-dot mr-2"></i> Singosari, Malang, Jawa Timur
+                    </p>
+                    <p class="text-slate-600 text-sm">Merupakan divisi dengan cakupan wilayah tengah dan timur Jawa dengan mobilitas tinggi.</p>
+                </div>
+
+                <!-- Divisi 3 -->
+                <div class="bg-white p-6 rounded-xl border-t-4 border-green-600 card-hover">
+                    <div class="text-green-700 font-bold text-lg mb-2">DIVIF 3</div>
+                    <h3 class="text-xl font-extrabold mb-3">Darpa Cakti Yudha</h3>
+                    <p class="text-sm text-slate-500 mb-4 flex items-center">
+                        <i class="fas fa-location-dot mr-2"></i> Pakatto, Gowa, Sulawesi Selatan
+                    </p>
+                    <p class="text-slate-600 text-sm">Diresmikan pada tahun 2018 untuk memperkuat pertahanan di wilayah Indonesia Timur.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Peran Section -->
+    <section id="peran" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold section-title inline-block">Peran Dalam Sejarah Nasional</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="p-6 bg-slate-50 rounded-xl hover:bg-green-50 transition border border-slate-100 group">
+                    <i class="fas fa-hand-fist text-3xl text-green-700 mb-4 group-hover:scale-110 transition"></i>
+                    <h4 class="font-bold mb-2">G30S/PKI (1965)</h4>
+                    <p class="text-sm text-slate-600">Peran sentral dalam memulihkan keamanan di Jakarta di bawah Mayjen Soeharto.</p>
+                </div>
+                <div class="p-6 bg-slate-50 rounded-xl hover:bg-green-50 transition border border-slate-100 group">
+                    <i class="fas fa-map-marked-alt text-3xl text-green-700 mb-4 group-hover:scale-110 transition"></i>
+                    <h4 class="font-bold mb-2">Operasi Seroja</h4>
+                    <p class="text-sm text-slate-600">Keterlibatan besar dalam proses integrasi Timor Timur pada tahun 1975.</p>
+                </div>
+                <div class="p-6 bg-slate-50 rounded-xl hover:bg-green-50 transition border border-slate-100 group">
+                    <i class="fas fa-shield-virus text-3xl text-green-700 mb-4 group-hover:scale-110 transition"></i>
+                    <h4 class="font-bold mb-2">DOM & Konflik</h4>
+                    <p class="text-sm text-slate-600">Aktif dalam penanganan konflik di Aceh, Papua, dan Poso untuk menjaga keutuhan NKRI.</p>
+                </div>
+                <div class="p-6 bg-slate-50 rounded-xl hover:bg-green-50 transition border border-slate-100 group">
+                    <i class="fas fa-globe text-3xl text-green-700 mb-4 group-hover:scale-110 transition"></i>
+                    <h4 class="font-bold mb-2">Misi PBB</h4>
+                    <p class="text-sm text-slate-600">Menjadi tulang punggung Kontingen Garuda (Konga) di berbagai negara konflik dunia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Identitas Section -->
+    <section id="identitas" class="py-20 bg-green-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-12">Atribut & Identitas</h2>
+            
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="flex flex-col items-center">
+                    <div class="w-24 h-24 bg-green-600 rounded-full flex items-center justify-center mb-6 shadow-lg">
+                        <i class="fas fa-hat-cowboy text-4xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Baret Hijau</h4>
+                    <p class="text-green-200 text-sm italic">Ciri khas utama prajurit Kostrad dengan lambang Dharma Putra.</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-24 h-24 bg-green-600 rounded-full flex items-center justify-center mb-6 shadow-lg">
+                        <i class="fas fa-quote-left text-4xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Yudha Wastu Pramuka</h4>
+                    <p class="text-green-200 text-sm italic">"Prajurit yang ahli dalam pertempuran darat."</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-24 h-24 bg-green-600 rounded-full flex items-center justify-center mb-6 shadow-lg">
+                        <i class="fas fa-bolt text-4xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Kemampuan Khusus</h4>
+                    <p class="text-green-200 text-sm italic">Lintas Udara, Para Raider, Urban Warfare, dan Intelijen Tempur.</p>
+                </div>
+            </div>
+
+            <div class="mt-20 p-8 border border-green-700 rounded-2xl bg-green-800/50">
+                <p class="text-2xl font-light italic">"Kostrad tetap menjadi kekuatan pemukul terbesar di jajaran TNI AD dengan mobilitas tinggi untuk menjaga kedaulatan NKRI."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center space-x-3 mb-4 md:mb-0">
+                    <div class="w-8 h-8 bg-green-700 text-white rounded-full flex items-center justify-center">
+                        <i class="fas fa-shield-halved text-xs"></i>
+                    </div>
+                    <span class="font-bold text-white tracking-widest uppercase">Kostrad Profil Sejarah</span>
+                </div>
+                <div class="text-sm">
+                    &copy; 2024 Profil Sejarah Kostrad. Materi dirangkum untuk tujuan edukasi.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Close menu on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
