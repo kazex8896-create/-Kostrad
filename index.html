@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sejarah KOSTRAD - Komando Cadangan Strategis Angkatan Darat</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/dist/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@300;400;700&display=swap');
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #1a1a1a;
+            color: #f0f0f0;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://images.unsplash.com/photo-1590402444587-43d6624799c9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 5px solid #4a5d23;
+        }
+
+        .timeline-card {
+            border-left: 4px solid #4a5d23;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-card:hover {
+            background-color: #262626;
+            transform: translateX(10px);
+        }
+
+        .military-border {
+            border: 2px solid #4a5d23;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .military-border::before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            right: 20px;
+            height: 20px;
+            background-color: #1a1a1a;
+        }
+
+        .accent-color {
+            color: #8da35d;
+        }
+
+        .bg-army {
+            background-color: #4a5d23;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <header class="hero-section text-center px-4">
+        <div>
+            <h1 class="text-5xl md:text-7xl font-bold mb-4">KOSTRAD</h1>
+            <p class="text-xl md:text-2xl accent-color font-light">Komando Cadangan Strategis Angkatan Darat</p>
+            <div class="mt-8 w-24 h-1 bg-army mx-auto"></div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-6 py-16">
+        
+        <!-- Intro Section -->
+        <section class="mb-20 text-center">
+            <h2 class="text-3xl font-bold mb-8 flex items-center justify-center">
+                <i class="fas fa-history mr-4 accent-color"></i> Asal Mula Pembentukan
+            </h2>
+            <p class="text-lg leading-relaxed text-gray-300">
+                Gagasan dibentuknya Kostrad tercetus dari Kasad <span class="text-white font-bold">Jenderal TNI A.H. Nasution</span> pada tahun 1960. Langkah strategis ini diambil sebagai respons terhadap situasi keamanan nasional yang dinamis pada masa itu.
+            </p>
+        </section>
+
+        <!-- Timeline Section -->
+        <section class="space-y-12">
+            
+            <!-- Point 1 -->
+            <div class="timeline-card p-6 bg-stone-900/50 rounded-r-lg">
+                <div class="flex items-start">
+                    <div class="mr-6">
+                        <span class="text-army font-bold text-2xl accent-color">1960</span>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Landasan Hukum Pertama</h3>
+                        <p class="text-gray-400">
+                            Dikeluarkannya <span class="italic">Surat Keputusan Kasad No. KPTS.1067/12/1960</span> pada tanggal <span class="text-white">27 Desember 1960</span>. Hal ini dipicu oleh masalah Irian Barat yang pada waktu itu masih menjadi sengketa sengit dengan pihak Belanda.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Point 2 -->
+            <div class="timeline-card p-6 bg-stone-900/50 rounded-r-lg">
+                <div class="flex items-start">
+                    <div class="mr-6">
+                        <span class="text-army font-bold text-2xl accent-color">1961</span>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Lahirnya CADUAD</h3>
+                        <p class="text-gray-400">
+                            Pada <span class="text-white">6 Maret 1961</span> ditetapkan sebagai hari lahirnya <span class="font-bold">Cadangan Umum Angkatan Darat (Caduad)</span>. Mayjen TNI Soeharto ditunjuk menjadi Panglima Korra I Caduad untuk memimpin operasi merebut Irian Barat.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Point 3 -->
+            <div class="timeline-card p-6 bg-stone-900/50 rounded-r-lg">
+                <div class="flex items-start">
+                    <div class="mr-6">
+                        <span class="text-army font-bold text-2xl accent-color">1963</span>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Transformasi Menjadi KOSTRAD</h3>
+                        <p class="text-gray-400">
+                            Caduad dilebur menjadi <span class="font-bold text-white">Komando Tjadangan Strategis Angkatan Darat (Kostrad)</span> pada <span class="text-white">15 Agustus 1963</span>. Soeharto tetap dipercaya menjadi panglimanya atau yang dikenal dengan istilah <span class="italic">Pangkostrad</span>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Quote or Key Fact Section -->
+        <section class="mt-20">
+            <div class="military-border">
+                <h3 class="text-2xl font-bold mb-4 accent-color">Kondisi Awal Pasukan</h3>
+                <p class="text-gray-300 italic">
+                    "Di sekitar tahun 1965, Kostrad belum memiliki pasukan tetap. Prajurit-prajurit cadangan Kostrad selalu dipinjam dari komando-komando daerah (Kodam-Kodam) sesuai dengan kebutuhan operasi strategis."
+                </p>
+                <div class="mt-6 flex justify-end">
+                    <span class="text-sm font-bold text-gray-500">- Catatan Sejarah Militer Indonesia</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Image Placeholder for Context -->
+        <section class="mt-20 grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="rounded overflow-hidden border border-gray-700">
+                <div class="bg-gray-800 h-48 flex items-center justify-center">
+                   <i class="fas fa-users text-4xl text-gray-600"></i>
+                </div>
+                <div class="p-4 bg-stone-900">
+                    <p class="text-xs uppercase tracking-widest text-gray-500 font-bold">Simbol Operasi</p>
+                    <p class="text-sm mt-1">Representasi kekuatan cadangan strategis dalam menjaga kedaulatan NKRI.</p>
+                </div>
+            </div>
+            <div class="rounded overflow-hidden border border-gray-700">
+                <div class="bg-gray-800 h-48 flex items-center justify-center">
+                    <i class="fas fa-map-marked-alt text-4xl text-gray-600"></i>
+                </div>
+                <div class="p-4 bg-stone-900">
+                    <p class="text-xs uppercase tracking-widest text-gray-500 font-bold">Irian Barat</p>
+                    <p class="text-sm mt-1">Fokus utama pembentukan awal untuk sengketa wilayah timur Indonesia.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12 border-t border-army mt-10">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-2xl font-bold mb-4">DISIPLIN - BERANI - SETIA</h2>
+            <p class="text-gray-500 text-sm">Halaman Informasi Sejarah Militer Indonesia &copy; 2024</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple animation logic for timeline cards
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.timeline-card');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100');
+                        entry.target.style.transform = 'translateX(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            cards.forEach(card => {
+                card.classList.add('opacity-0');
+                card.style.transform = 'translateX(-20px)';
+                card.style.transition = 'all 0.6s ease-out';
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>
